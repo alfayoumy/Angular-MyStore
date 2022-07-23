@@ -1,29 +1,15 @@
-# Udacity MyStore
-!['product list'](./docs/product_list.png)
+# MyStore
 
-MyStore is a single-page application  built in Angular, that offers a rich, dynamic experience on the web. It presents a list of product which can be added to a cart then chechout. Bellow are all the functionality one can perform: 
+This project was generated with [Angular CLI] version 13.3.6.
 
-- View list of products
-- Add products to cart
-- View products in cart
-- Delete product from cart 
-- Checkout products in cart 
+## Development server
 
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Run 
-### Install Dependencies 
-fork this repo and open a terminal at the root directory and run the command 
+## Build
 
-```
-npm install
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Start server
-On the same terminal, run the command 
-```
-ng serve
-```
-Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Running unit tests
 
-**NB**: Be sure to allow the default port of `4200`
-
+Run `ng test` to execute the unit tests via [Karma]
