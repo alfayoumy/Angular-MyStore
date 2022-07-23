@@ -1,0 +1,44 @@
+[
+{
+    "id": 1,
+    "name": "Glasses",
+    "price": 129.99,
+    "url": "https://static-01.daraz.pk/p/30e1e82682cd7b91aad7f8f9f6b40f8b.jpg",
+    "description": "Round Glasses"
+  },
+  {
+    "id": 2,
+    "name": "Cup",
+    "price": 4.99,
+    "url": "https://moorewilsons.co.nz/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/r/o/roman_cup_270ml_1_1/acme-roman-cup-31.1610485323.jpg",
+    "description": "Amazing Olive Mug"
+  },
+  {
+    "id": 3,
+    "name": "Shirt",
+    "price": 29.99,
+    "url": "https://fabricprinting.pk/wp-content/uploads/2020/07/Polo-Shirt-1.jpg",
+    "description": "Polo Shirt"
+  },
+  {
+    "id": 4,
+    "name": "Book",
+    "price": 19.99,
+    "url": "https://s.yimg.com/aah/hawkespublishing/introduction-to-psychology-1st-edition-textbook-23.png",
+    "description": "The Psychology Book"
+  },
+  {
+    "id": 5,
+    "name": "Headphones",
+    "price": 199.99,
+    "url": "https://petertyson.co.uk/media/catalog/product/cache/edae39c3f6c672a740a0fed2758d35f6/b/o/bose-noise-cancelling-headphones-700-white-front-view-2_pr27904_1_1_.jpg",
+    "description": "Bose Headphones"
+  },
+  {
+    "id": 6,
+    "name": "Backpack",
+    "price": 69.99,
+    "url": "https://www.ikea.com/eg/en/images/products/starttid-backpack-grey__0976467_pe814916_s5.jpg",
+    "description": "IKEA Backpack"
+  }
+]
