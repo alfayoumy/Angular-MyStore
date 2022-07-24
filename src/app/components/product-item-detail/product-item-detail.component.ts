@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/Product';
@@ -13,6 +13,9 @@ export class ProductItemDetailComponent implements OnInit {
   id: number | null = null;
   products: Product[]= [];
   product: Product | null = null;
+
+  @Input() productItem!: Product;
+  @Output() addToCart: EventEmitter<Product> = new EventEmitter();
 
   constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
