@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { Product, productCount } from '../../models/Product';
@@ -10,7 +10,7 @@ import { CartProduct } from '../../models/CartProduct';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  products: Product[]= [];
+  @Input() products: Product[]= [];
   cartProducts: CartProduct[] = [];
   productCount: string[] = productCount;
   totalPrice: number = 0;

@@ -1,13 +1,65 @@
-<form class="form-margin" #form="ngForm"  (ngSubmit)="onSubmit()">
-  <h1> Checkout </h1>
-  <label>Full Name: </label><br />
-  <input type='text' name='firstName' required minlength="9" placeholder="Enter First Name" [(ngModel)]="firstName">
+<form class="form-margin" #form="ngForm" (ngSubmit)="onSubmit()">
+  <p>
+    Full Name
+    <input
+      type="text"
+      name="fullName"
+      id="fullName"
+      placeholder="Enter Full Name"
+      required
+      minlength="5"
+      [(ngModel)]="firstName"
+      #fullName="ngModel"
+    />
+  </p>
+  <p>
+    Address
+    <input
+      type="text"
+      name="address"
+      id="address"
+      placeholder="Enter Address"
+      required
+      minlength="10"
+      [(ngModel)]="address"
+      #addr="ngModel"
+    />
+  </p>
+  <p>
+    Credit Card Number
+    <input
+      type="text"
+      name="ccNum"
+      id="ccNum"
+      placeholder="(16-digit number)"
+      required
+      minlength="16"
+      maxlength="16"
+      inputmode="numeric"
+      pattern="^[0-9]*$"
+      [(ngModel)]="creditCard"
+      #ccNum="ngModel"
+    />
+  </p>
   <br />
-  <label>Address: </label><br />
-  <input type='text' name='address' required  minlength="10" placeholder="Enter Address" [(ngModel)]="address">
-  <br />
-  <label>Credit Card Number: </label><br />
-  <input type='text' name='creditCard' required  minlength="16" maxlength="16" placeholder="(16-digit number)" [(ngModel)]="creditCard">
-  <br />
-  <input [disabled]="form.invalid" type='submit' value="Submit" class="btn btn-primary" />
+
+  <button [disabled]="form.invalid">Submit Order</button>
 </form>
+<div *ngIf="fullName.invalid && fullName.dirty">
+  <div *ngIf="fullName.errors?.required">Please provide a full name.</div>
+  <div *ngIf="fullName.errors?.minlength">
+    Full name must contain at least 5 characters.
+  </div>
+</div>
+<div *ngIf="addr.invalid && fullName.dirty">
+  <div *ngIf="addr.errors?.required">Please provide an address.</div>
+  <div *ngIf="addr.errors?.minlength">
+    Address must contain at least 10 characters.
+  </div>
+</div>
+<div *ngIf="ccNum.invalid && fullName.dirty">
+  <div *ngIf="ccNum.errors?.required">Please provide a credit card number.</div>
+  <div *ngIf="ccNum.errors?.minlength">
+    Credit card number must be 16 digits long.
+  </div>
+</div>
